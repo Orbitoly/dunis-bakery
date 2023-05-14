@@ -7,9 +7,8 @@ const runtimeConfig = useRuntimeConfig();
     <div class="container flex flex-wrap my-24 gap-12 justify-between md:gap-24">
       <div class="mr-auto">
         <Logo />
-        <p class="mt-4 text-sm text-gray-700 xl:max-w-sm">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl sit amet aliquam lacinia, nunc odio lacinia tortor, vel aliquam nisl lorem quis nunc. Sed
-          euismod, nisl sit amet aliquam lacinia, nunc odio lacinia tortor, vel aliquam nisl lorem quis nunc.
+        <p dir="rtl" class="mt-4 text-sm text-gray-700 xl:max-w-sm">
+          היי! נעים להכיר אני עדן ואני צליאקית שמאוהבת במתוקים! נכנסתי לעולם הקונדיטוריה במטרה להכיו דברים ללא גלוטן טובים ללא הבדל (:
         </p>
         <LangSwitcher class="mt-8" />
       </div>
@@ -53,8 +52,8 @@ const runtimeConfig = useRuntimeConfig();
     <div class="container border-t">
       <div class="copywrite">
         <p class="text-xs text-center py-4">
-          <a href="https://woonuxt.com">WooNuxt v{{ runtimeConfig.public.version }}</a> - by
-          <a href="https://scottyzen.com" target="_blank">Scottyzen</a>
+          WooNuxt v{{ runtimeConfig.public.version }} - by
+          <a href="https://github.com/Orbitoly" target="_blank">Or Virt</a>
         </p>
       </div>
     </div>

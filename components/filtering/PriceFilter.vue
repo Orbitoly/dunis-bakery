@@ -6,7 +6,7 @@ const maxPrice = runtimeConfig?.public?.MAX_PRICE || 1000;
 const activeFilters = ref(getFilter('price'));
 const price = activeFilters.value.length ? ref(activeFilters.value) : ref([0, maxPrice]);
 const isOpen = ref(true);
-
+console.log('maxPrice', runtimeConfig?.public);
 // watch(price, () => {
 //     setFilter("price", price.value);
 // });
@@ -31,7 +31,7 @@ const applyPrice = () => {
           type="number"
           placeholder="From"
           min="0" />
-        <label for="price-from" class="leading-none px-2 text-gray-400 absolute">€</label>
+        <label for="price-from" class="leading-none px-2 text-gray-400 absolute">₪</label>
       </div>
       <div class="flex relative items-center">
         <input
@@ -41,7 +41,7 @@ const applyPrice = () => {
           type="number"
           placeholder="Up to"
           min="1" />
-        <label for="price-to" class="leading-none px-2 text-gray-400 absolute">€</label>
+        <label for="price-to" class="leading-none px-2 text-gray-400 absolute">₪</label>
       </div>
       <div class="mx-1 mt-1 col-span-full">
         <Slider v-model="price" :tooltips="false" :lazy="false" :min="0" :max="maxPrice" @change="applyPrice" />
