@@ -37,12 +37,12 @@ export default defineNuxtConfig({
 
   i18n: {
     locales: [
+      { code: 'he', file: 'he-IL.json', name: 'עברית',dir:'rtl' },
       { code: 'en', file: 'en-US.json', name: 'English' },
-      { code: 'de', file: 'de-DE.json', name: 'Deutsch' },
     ],
     // lazy: true,
     langDir: 'lang/',
-    defaultLocale: 'en',
+    defaultLocale: 'he',
     strategy: 'no_prefix',
   },
 

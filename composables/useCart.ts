@@ -9,7 +9,7 @@ export function useCart() {
   async function refreshCart() {
     try {
       const { cart, customer, viewer, paymentGateways } = await GqlGetCart();
-
+      console.error(paymentGateways)
       const { updateCustomer, updateViewer } = useAuth() as any;
       if (cart) updateCart(cart);
       if (customer) updateCustomer(customer);

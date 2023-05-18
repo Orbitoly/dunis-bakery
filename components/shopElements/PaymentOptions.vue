@@ -14,7 +14,7 @@ const updatePaymentMethod = (value) => {
 
 onMounted(() => {
   // Emit first payment method
-  updatePaymentMethod(props.paymentGateways[0].id);
+  updatePaymentMethod(props.paymentGateways[0]?.id);
 });
 </script>
 

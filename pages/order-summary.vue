@@ -33,7 +33,7 @@ function formatPrice(price: string) {
 
 <template>
   <div class="w-full min-h-[600px] flex justify-center items-center p-8 text-gray-800 md:bg-white md:rounded-xl md:mx-auto md:shadow-lg md:my-24 md:mt-8 md:max-w-3xl md:p-16">
-    <div v-if="order?.databaseId" class="w-full">
+    <!-- <div v-if="order?.databaseId" class="w-full">
       <h1 class="mb-2 text-xl font-semibold">{{ $t('messages.shop.orderSummary') }}</h1>
       <p v-if="order">{{ $t('messages.shop.orderThanks') }}</p>
 
@@ -105,6 +105,17 @@ function formatPrice(price: string) {
       <h1 class="mb-4 text-2xl font-semibold">{{ $t('messages.error.general') }}</h1>
       <p class="mb-8">
         {{ $t('messages.error.noOrder') }}
+      </p>
+      <NuxtLink to="/" class="bg-primary rounded-lg font-bold text-white text-center min-w-[150px] p-2.5 focus:outline-noney">
+        {{ $t('messages.general.goHome') }}
+      </NuxtLink>
+    </div> -->
+    <div v-if="true" class="w-full text-center">
+      <h1 class="mb-4 text-2xl font-semibold">ההזמנה התקבלה בהצלחה</h1>
+      <p class="mb-8">
+        🎉
+
+         אנחנו מעבדים את ההזמנה הטעימה שלך, ניצור איתך קשר בהקדם האפשרי לתשלום
       </p>
       <NuxtLink to="/" class="bg-primary rounded-lg font-bold text-white text-center min-w-[150px] p-2.5 focus:outline-noney">
         {{ $t('messages.general.goHome') }}

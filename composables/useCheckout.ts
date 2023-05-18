@@ -47,6 +47,7 @@ export function useCheckout() {
       state: customer.value.shipping?.state,
     };
 
+
     const { checkout } = await GqlCheckout({
       billing,
       shipping: orderInput.value.shipToDifferentAddress ? shipping : billing,
@@ -54,7 +55,9 @@ export function useCheckout() {
       paymentMethod: orderInput.value.paymentMethod,
       customerNote: orderInput.value.customerNote,
       shipToDifferentAddress: orderInput.value.shipToDifferentAddress,
-    });
+    })
+
+
 
     if ((await checkout?.result) === 'success') {
       refreshCart();

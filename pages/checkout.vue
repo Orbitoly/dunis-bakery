@@ -1,7 +1,7 @@
 <script setup>
 import { StripeElements, StripeElement } from 'vue-stripe-js';
 import { loadStripe } from '@stripe/stripe-js';
-
+//import axios
 const { t } = useI18n();
 const { cart, toggleCart, isUpdatingCart, paymentGateways } = useCart();
 const { customer } = useAuth();
@@ -30,6 +30,30 @@ onBeforeMount(() => {
     stripeLoaded.value = true;
   });
 });
+
+
+const createOrder=()=> {
+    const orderData = {
+      payment_method: 'cod',
+      payment_method_title: 'Cash on Delivery',
+      // Add other order data as needed
+    };
+
+    axios.post('https://dunibakery.duckdns.org/wp-json/wc/v3/orders', orderData, {
+      auth: {
+        username: 'YOUR_CONSUMER_KEY',
+        password: 'YOUR_CONSUMER_SECRET'
+      }
+    })
+    .then(response => {
+      // Handle the successful creation of the order
+      console.log('Order created:', response.data);
+    })
+    .catch(error => {
+      // Handle the error if the order creation fails
+      console.error('Error creating order:', error);
+    });
+  }
 
 // If cart is open, close it after 600ms
 onMounted(() => {
@@ -106,6 +130,7 @@ const payNow = async () => {
         <div class="mt-2 col-span-full">
           <h2 class="mb-4 text-xl font-semibold">{{ $t('messages.billing.paymentOptions') }}</h2>
           <PaymentOptions v-model="orderInput.paymentMethod" class="mb-4" :paymentGateways="paymentGateways" />
+
 
           <Transition name="scale-y" mode="out-in">
             <StripeElements
