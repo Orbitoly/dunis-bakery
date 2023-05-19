@@ -3,7 +3,7 @@ const runtimeConfig = useRuntimeConfig();
 </script>
 
 <template>
-  <div class="bg-white" dir="rtl">
+  <div class="bg-white sticky-footer" dir="rtl">
     <div class="container flex flex-wrap my-24 gap-12 justify-between md:gap-24">
       <div class="mr-auto">
         <Logo />
@@ -51,3 +51,9 @@ const runtimeConfig = useRuntimeConfig();
     </div>
   </div>
 </template>
+
+<style scoped>
+.sticky-footer{
+    text-align: center;
+}
+</style>
