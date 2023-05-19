@@ -66,7 +66,7 @@ const updateSelectedVariations = (variations: Variation[]) => {
 </script>
 
 <template>
-  <main class="container relative py-6 xl:max-w-7xl" v-if="product">
+  <main dir="rtl" class="container relative py-6 xl:max-w-7xl" v-if="product">
     <!-- Breadcrumb -->
     <Breadcrumb
       v-if="primaryCategory"
@@ -82,6 +82,7 @@ const updateSelectedVariations = (variations: Variation[]) => {
 
     <div class="flex flex-col gap-10 md:flex-row md:justify-between lg:gap-24">
       <ProductImageGallery
+      style="max-width: 500px;"
         v-if="product.image"
         class="relative flex-1"
         :first-image="product.image.sourceUrl!"

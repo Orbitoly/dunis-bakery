@@ -9,7 +9,7 @@ onMounted(() => {
 });
 
 useHead({
-  title: 'Products',
+  title: 'מוצרים',
   meta: [{ hid: 'description', name: 'description', content: 'Products' }],
 });
 </script>
