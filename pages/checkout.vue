@@ -79,7 +79,7 @@ const payNow = async () => {
 </script>
 
 <template>
-  <div class="flex flex-col min-h-[600px]">
+  <div dir="rtl" class="flex flex-col min-h-[600px]">
     <LoadingIcon v-if="!cart" class="m-auto" />
 
     <form v-if="cart" class="container flex flex-wrap items-start gap-8 my-16 justify-evenly md:flex-row-reverse lg:gap-24" @submit.prevent="payNow">
