@@ -1,5 +1,5 @@
 <template>
-  <div class="max-w-lg mx-auto my-16 min-h-[600px] lg:my-24">
+  <div class="max-w-lg mx-auto my-16 min-h-[600px] lg:my-24" dir="rtl">
     <h1 class="mb-4 text-xl font-bold lg:text-3xl">{{ $t('messages.account.myAccount') }}</h1>
     <form class="mb-4" @submit.prevent="loginOrRegister(userInfo)">
       <label v-if="formView == 'register'" for="email"
@@ -27,13 +27,13 @@
     </form>
     <div v-if="formView == 'login'" class="my-4 text-center">
       {{ $t('messages.account.noAccount') }}
-      <a class="underline cursor-pointer" @click="formView = 'register'">{{ $t('messages.general.please') }} {{ $t('messages.account.accountRegister') }}</a
-      >.
+      <a class="underline cursor-pointer" @click="formView = 'register'">{{ $t('messages.account.accountRegister') }}</a
+      >
     </div>
     <div v-if="formView == 'register'" class="my-4 text-center">
       {{ $t('messages.account.hasAccount') }}
-      <a class="underline cursor-pointer" @click="formView = 'login'">{{ $t('messages.general.please') }} {{ $t('messages.account.accountLogin') }}</a
-      >.
+      <a class="underline cursor-pointer" @click="formView = 'login'">{{ $t('messages.account.accountLogin') }}</a
+      >
     </div>
   </div>
 </template>

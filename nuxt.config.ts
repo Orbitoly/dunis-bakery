@@ -39,10 +39,13 @@ export default defineNuxtConfig({
     locales: [
       { code: 'he', file: 'he-IL.json', name: 'עברית',dir:'rtl' },
       { code: 'en', file: 'en-US.json', name: 'English' },
+
     ],
     // lazy: true,
     langDir: 'lang/',
+    defaultDirection:'rtl',
     defaultLocale: 'he',
+    detectBrowserLanguage: false,
     strategy: 'no_prefix',
   },
 

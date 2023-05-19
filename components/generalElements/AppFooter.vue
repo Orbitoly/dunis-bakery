@@ -3,7 +3,7 @@ const runtimeConfig = useRuntimeConfig();
 </script>
 
 <template>
-  <div class="bg-white">
+  <div class="bg-white" dir="rtl">
     <div class="container flex flex-wrap my-24 gap-12 justify-between md:gap-24">
       <div class="mr-auto">
         <Logo />
@@ -12,17 +12,9 @@ const runtimeConfig = useRuntimeConfig();
         </p>
         <LangSwitcher class="mt-8" />
       </div>
+     
       <div class="w-3/7 lg:w-auto">
-        <div class="font-semibold mb-1">Information</div>
-        <div class="text-sm">
-          <a href="#" class="py-1.5 block">About Us</a>
-          <a href="#" class="py-1.5 block">Careers</a>
-          <a href="#" class="py-1.5 block">Press</a>
-          <a href="#" class="py-1.5 block">Affiliates</a>
-        </div>
-      </div>
-      <div class="w-3/7 lg:w-auto">
-        <div class="font-semibold mb-1">Products</div>
+        <div class="font-semibold mb-1">מוצרים</div>
         <div class="text-sm">
           <NuxtLink to="/products?orderby=date&order=DESC" class="py-1.5 block">{{ $t('messages.shop.newArrivals') }}</NuxtLink>
           <NuxtLink to="/products?filter=sale[true]" class="py-1.5 block">{{ $t('messages.shop.onSale') }}</NuxtLink>
@@ -33,10 +25,10 @@ const runtimeConfig = useRuntimeConfig();
       <div class="w-3/7 lg:w-auto">
         <div class="font-semibold mb-1">{{ $t('messages.general.customerService') }}</div>
         <div class="text-sm">
-          <a href="#" class="py-1.5 block">Contact Us</a>
-          <a href="#" class="py-1.5 block">Shipping & Returns</a>
-          <a href="#" class="py-1.5 block">Privacy Policy</a>
-          <a href="#" class="py-1.5 block">Terms & Conditions</a>
+          <a href="#" class="py-1.5 block">צרו קשר</a>
+          <a href="#" class="py-1.5 block">מדיניות משלוחים</a>
+          <a href="#" class="py-1.5 block">מדיניות הפרטיות</a>
+          <a href="#" class="py-1.5 block">תנאי שימוש</a>
         </div>
       </div>
       <div class="w-3/7 lg:w-auto">

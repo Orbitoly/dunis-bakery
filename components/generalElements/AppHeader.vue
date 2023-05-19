@@ -1,5 +1,5 @@
 <template>
-  <header class="bg-white shadow-sm top-0 shadow-light-500 z-40 sticky">
+  <header class="bg-white shadow-sm top-0 shadow-light-500 z-40 sticky" dir="rtl">
     <div class="container flex py-4 items-center justify-between">
       <div class="flex items-center">
         <MenuTrigger class="md:hidden" />

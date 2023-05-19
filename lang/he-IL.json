@@ -30,7 +30,7 @@
       "downloads": "הורדות",
       "goHome": "חזרה למסך בית",
       "newsletter": "Newsletter",
-      "customerService": "Customer Service",
+      "customerService": "שירות לקוחות",
       "processing": "...עובדים על זה"
     },
     "account": {
@@ -54,7 +54,7 @@
       "personalInfo": "Personal Information"
     },
     "shop": {
-      "shopByCategory": "Shop by Category",
+      "shopByCategory": "צפו בקטגוריות שלנו",
       "availability": "זמינות",
       "inStock": "במלאי",
       "outOfStock": "לא במלאי",
@@ -65,14 +65,14 @@
       "wishlist": " 💕 מוצרים שאהבתי",
       "wishlistRemove": "הסרה ממוצרים שאהבתי",
       "wishlistAdd": "הוספה למוצרים שאהבתי",
-      "wishlistNoItems": "You have no items in your wishlist",
+      "wishlistNoItems": "עדיין אין לך מוצרים שאהבת!",
       "addToCart": "הוספה לעגלה",
       "adding": "😬 ...מוסיף",
       "productDescription": "תיאור",
       "productImage": "Product Image",
-      "productBestSellers": "Best Sellers",
-      "newArrivals": "New Arrivals",
-      "onSale": "On Sale",
+      "productBestSellers": "האהובים ביותר",
+      "newArrivals": "החדשים",
+      "onSale": "המבצעים",
       "reviews": "Reviews",
       "customerReviews": "Customer Reviews",
       "noReviews": "No reviews yet.",

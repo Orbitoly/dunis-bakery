@@ -23,7 +23,7 @@ useHead({
       <img src="/images/logoipsum-215.svg" alt="Brand 6" width="132" height="40" />
     </div>
 
-    <section class="container my-16">
+    <section class="container my-16" dir="rtl">
       <div class="flex items-end justify-between">
         <h2 class="text-lg font-semibold md:text-2xl">{{ $t('messages.shop.shopByCategory') }}</h2>
         <NuxtLink class="text-primary" to="/categories">{{ $t('messages.general.viewAll') }}</NuxtLink>

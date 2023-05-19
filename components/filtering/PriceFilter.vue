@@ -23,17 +23,8 @@ const applyPrice = () => {
       <Icon name="ion:chevron-down-outline" class="transform" :class="isOpen ? 'rotate-180' : ''" />
     </div>
     <div v-show="isOpen" class="mt-3 grid gap-4 grid-cols-2">
-      <div class="flex relative items-center">
-        <input
-          id="price-from"
-          v-model="price[0]"
-          class="bg-white border rounded-lg max-w-full border-gray-200 leading-none w-auto p-2 pl-6 md:text-sm"
-          type="number"
-          placeholder="From"
-          min="0" />
-        <label for="price-from" class="leading-none px-2 text-gray-400 absolute">₪</label>
-      </div>
-      <div class="flex relative items-center">
+  
+      <div class="flex relative items-center" dir="ltr">
         <input
           id="price-to"
           v-model="price[1]"
@@ -43,7 +34,17 @@ const applyPrice = () => {
           min="1" />
         <label for="price-to" class="leading-none px-2 text-gray-400 absolute">₪</label>
       </div>
-      <div class="mx-1 mt-1 col-span-full">
+      <div class="flex relative items-center" dir="ltr">
+        <input
+          id="price-from"
+          v-model="price[0]"
+          class="bg-white border rounded-lg max-w-full border-gray-200 leading-none w-auto p-2 pl-6 md:text-sm"
+          type="number"
+          placeholder="From"
+          min="0" />
+        <label for="price-from" class="leading-none px-2 text-gray-400 absolute">₪</label>
+      </div>
+      <div class="mx-1 mt-1 col-span-full" dir="ltr">
         <Slider v-model="price" :tooltips="false" :lazy="false" :min="0" :max="maxPrice" @change="applyPrice" />
       </div>
     </div>
