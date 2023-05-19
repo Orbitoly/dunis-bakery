@@ -83,8 +83,8 @@ async function addComment() {
         </div>
       </div>
     </div>
-    <div class="mt-10 text-xl mb-2 text-gray-900">Share your thoughts</div>
-    <div class="text-sm mb-4">If you have used this product, we would love to hear about your experience.</div>
+    <div class="mt-10 text-xl mb-2 text-gray-900">תנו דעה! היה לכם טעים?</div>
+    <div class="text-sm mb-4">הדעה שלכם עוזרת לנו, נשמח לשמוע מכם שהיה לכם טעים!</div>
     <button @click="show = !show" class="border rounded-lg text-center w-full p-2">{{ show ? $t('messages.shop.close') : $t('messages.shop.writeReview') }}</button>
     <transition class="ease-in-out transform transition-all" name="scale-y">
       <form v-if="show" @submit.prevent="addComment" class="writeReview">
@@ -107,7 +107,7 @@ async function addComment() {
             </div>
             <div class="w-full col-span-full">
               <label for="content" class="text-sm mb-0.5">{{ $t('messages.shop.rateContent') }} <span class="text-red-500">*</span></label>
-              <textarea class="w-full" id="content" placeholder="Great Quality" v-model="content" required></textarea>
+              <textarea class="w-full" id="content" placeholder="טעיםםםםם בטירוף!" v-model="content" required></textarea>
             </div>
             <div class="w-full col-span-full">
               <label for="author" class="text-sm mb-0.5">{{ $t('messages.shop.rateEmail') }} <span class="text-red-500">*</span></label>

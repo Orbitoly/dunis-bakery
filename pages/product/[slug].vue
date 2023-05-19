@@ -72,7 +72,7 @@ const updateSelectedVariations = (variations: Variation[]) => {
       v-if="primaryCategory"
       class="mb-6"
       :format="[
-        { name: 'Products', slug: '/products' },
+        { name: 'מוצרים', slug: '/products' },
         {
           name: primaryCategory.name,
           slug: `/product-category/${primaryCategory.slug}`,
@@ -124,13 +124,15 @@ const updateSelectedVariations = (variations: Variation[]) => {
             :variations="product.variations.nodes"
             @attrs-changed="updateSelectedVariations" />
           <div class="flex items-center gap-4 mt-12">
+            <AddToCartButton class="flex-1 w-full md:max-w-xs" :disabled="!activeVariation && !!product.variations" :class="{ loading: isUpdatingCart }" />
+            
             <input
+            dir="ltr"
               v-model="quantity"
               type="number"
               min="1"
               aria-label="Quantity"
               class="bg-white border rounded-lg flex text-left p-2.5 w-20 gap-4 items-center justify-center focus:outline-none" />
-            <AddToCartButton class="flex-1 w-full md:max-w-xs" :disabled="!activeVariation && !!product.variations" :class="{ loading: isUpdatingCart }" />
           </div>
         </form>
 

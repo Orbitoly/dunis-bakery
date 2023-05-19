@@ -12,11 +12,11 @@ const underlayCick = () => {
   <div class="flex flex-col min-h-screen">
     <AppHeader />
 
-    <Transition name="slide-from-right">
+    <Transition name="slide-from-left">
       <Cart v-if="isShowingCart" />
     </Transition>
 
-    <Transition name="slide-from-left">
+    <Transition name="slide-from-right">
       <MobileMenu v-if="isShowingMobileMenu" />
     </Transition>
 
